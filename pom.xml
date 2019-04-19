@@ -1,11 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <!--配置链接参考：https://zhuanlan.zhihu.com/p/62841181 -->
     <!--pom版本-->
     <modelVersion>4.0.0</modelVersion>
 
     <!-- 坐标 -->
     <!--公司或组织+项目名-->
-    <groupId>com.fundebug</groupId>
+    <groupId>com.gason</groupId>
     <!--模块名-->
     <artifactId>hello</artifactId>
     <!--版本号-->
@@ -27,4 +28,39 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <build>
+        <!--项目名称-->
+        <finalName>MavenTutorial</finalName>
+        <!--描述项目中资源的位置-->
+        <resources>
+            <!--自定义资源位置-->
+            <resource>
+                <!-- 资源目录 -->
+                <directory>src/main/resources</directory>
+                <!-- 包括哪些文件参与打包 -->
+                <includes>
+                    <include>*.json</include>
+                </includes>
+                <!-- 排除哪些文件不参与打包 -->
+                <excludes>
+                    <exclude>*.txt</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <!-- 设置构建时候的插件 -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <!-- 源代码编译版本 -->
+                    <source>1.8</source>
+                    <!-- 目标平台编译版本 -->
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
