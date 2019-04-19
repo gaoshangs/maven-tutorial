@@ -1,17 +1,30 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-        <modelVersion>4.0.0</modelVersion>
-        <!-- 坐标 -->
-        <groupId>com.fundebug</groupId>
-        <artifactId>hello</artifactId>
-        <version>1.0</version>
-        <!-- 依赖 -->
-        <dependencies>
-                <!-- https://mvnrepository.com/artifact/org.json/json -->
-                <dependency>
-                        <groupId>org.json</groupId>
-                        <artifactId>json</artifactId>
-                        <version>20180813</version>
-                </dependency>
-        </dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <!--pom版本-->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 坐标 -->
+    <!--公司或组织+项目名-->
+    <groupId>com.fundebug</groupId>
+    <!--模块名-->
+    <artifactId>hello</artifactId>
+    <!--版本号-->
+    <version>1.0</version>
+
+    <!-- 依赖 -->
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180813</version>
+        </dependency>
+        <!--junit-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>
